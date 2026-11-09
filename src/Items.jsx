@@ -11,7 +11,7 @@ function Items() {
 
     const getItems = async () => {
         try {
-            const response = await axios.get('http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline')
+            const response = await axios.get('https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline')
             setIsLoading(false)
             console.info(response.data.slice(0, 20))
             setItems(response.data.slice(0, 20))
